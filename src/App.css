@@ -1,38 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  background: linear-gradient(90deg, rgb(32, 32, 32) 0%, rgb(64, 64, 64) 50%, rgb(32, 32, 32) 100%);
+  color: rgb(0, 213, 255);
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  text-shadow: 1px 0px 4px rgb(0, 0, 0);
+}
+
+#header {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 10%;
+  font-family: 'Stardos Stencil', cursive;
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+#header:hover {
+  cursor: default;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.error {
+  text-decoration-line: line-through;
+}
+
+#nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 15px;
+  width: 70vw;
+  border: solid rgb(0, 0, 0);
+  box-shadow: inset 0px 0px 1px white;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  font-family: 'Stardos Stencil', cursive;
+  font-size: 1.5rem;
+}
+
+p:hover {
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(90, 141, 151);
+  margin: 0rem 2rem 0rem 2rem;
+}
+
+a:hover {
+  color: rgb(0, 213, 255);
+  animation: rainbow 10s infinite;
+  text-shadow: 1px 4px 4px rgb(0, 0, 0);
+}
+
+#thanks {
+  animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+  0% { color: rgb(0, 213, 255); }
+  50% { color: rgb(90, 141, 151); }
+  100% { color: rgb(0, 213, 255); }
+}
+
+@keyframes rainbow {
+  100%, 0% { color: rgb(255, 0, 255); }
+  50% { color: rgb(0, 255, 0); }
+}
+
+@media screen and (max-width: 1130px) {
+  a {
+    display: flex;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  #header {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-height: 476px) {
+  #nav {
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-height: 746px) and (max-width: 1130px) {
+  #nav {
+    overflow-y: scroll;
   }
 }
