@@ -11,7 +11,7 @@ function App() {
       <div id='nav'>
         <div>
           <p>APIs</p>
-          <a href='https://smoothieapi.netlify.app' target='_blank' className='error'>Smooth(ie)-API</a>
+          <a href='https://smoothapibrett.netlify.app' target='_blank'>Smooth(ie)-API</a>
           <a href='https://cats4lyf-desk3.netlify.app/' target='_blank'>Cats4Lyf</a>
           <a href='https://fetchapicn.netlify.app/' target='_blank'>Anime-API</a>
         </div>
